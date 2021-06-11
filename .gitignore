@@ -1,0 +1,5 @@
+.terraform
+.terraform.lock.hcl
+.cache
+kustomize
+aws_config

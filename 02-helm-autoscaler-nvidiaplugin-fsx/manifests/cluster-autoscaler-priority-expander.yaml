@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: cluster-autoscaler-priority-expander
+  namespace: kube-system
+data:
+  priorities: |-
+    10:
+      - .*-non-existing-entry.*
+    20:
+      - .*gpu-ondemand-large-a.*
+    30:
+      - .*gpu-spot-large-a.*
+    40:
+      - .*gpu-ondemand-small-a.*
+    50:
+      - .*gpu-spot-small-a.*
+    60:
+      - .*cpu-spot-a.*
+    70:
+      - .*cpu-ondemand.*

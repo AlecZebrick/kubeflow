@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  annotations:
+    eks.amazonaws.com/role-arn: arn:aws:iam::***********:policy/Amazon_FSx_Lustre_CSI_Driver
+  name: fsx-csi-controller-sa
+  namespace: kubeflow
